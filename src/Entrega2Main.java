@@ -9,7 +9,7 @@ public class Entrega2Main {
         Concurso sesion3 = new Concurso("Sesion 3", 3);
 
         List<Concurso> concursoList = new ArrayList<>();
-        List<String> equipos = Arrays.asList("Equipo 1", "Equipo 2", "Equipo 3");
+        List<String> equipos = Arrays.asList("Equipo 1", "Equipo 2", "Equipo 3", "Equipo 4");
 
         concursoList.addAll(Arrays.asList(sesion1,sesion2,sesion3));
 

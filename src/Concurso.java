@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Concurso {
     private String nombre;
@@ -67,7 +68,11 @@ public class Concurso {
     }
 
     public Boolean eliminarEquipo(String equipo){
-        return false;
+        if(!buscarEquipo(equipo)) return false;
+
+        this.setEnvios(this.envios.stream().filter(envio-> envio.getNombreEquipo().equals(equipo)).collect(Collectors.toList()));
+        this.setEquiposParticipantes(this.equiposParticipantes.stream().filter(equipoL-> equipoL.equals(equipo)).collect(Collectors.toList()));
+        return true;
     }
 
     public Envio registrarEnvio(String equipo, Integer numeroProblema, String respuesta){

@@ -9,6 +9,18 @@ public final class Envio {
         this.respuesta = respuesta;
     }
 
+    public String getNombreEquipo() {
+        return nombreEquipo;
+    }
+
+    public Integer getNumeroProblema() {
+        return numeroProblema;
+    }
+
+    public String getRespuesta() {
+        return respuesta;
+    }
+
     @Override
     public String toString() {
         return "Envio: {" +
